@@ -14,16 +14,15 @@ let dataArray = [
 
 
 let carsContainerElement = document.getElementById("carsContainer");
-
-carsContainerElement.appendChild(document.createElement("ul"));
-
-let carsContainerList = 
+let carsContainerList = document.createElement("ul");
 
 
 dataArray.forEach((car) => {
 	console.log(car);
 
-	carsContainerElement.getElementsByTagName("ul")[0].innerText += (car + "\n");
+	let newCarEntry = document.createElement("li");
+
+	carsContainerElement.appendChild(newCarEntry);
 });
 
 
